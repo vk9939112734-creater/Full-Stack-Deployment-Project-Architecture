@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1f44">
+  <meta name="description" content="VayoraWeather provides live weather, temperature, humidity, wind and forecasts.">
+  <title>VayoraWeather — Better Weather, Brighter Days</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <a class="brand" href="#home">
+      <span class="brand-icon">☀️</span> Vayora<span>Weather</span>
+    </a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#weather">Weather</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="eyebrow">LIVE WEATHER · REAL TIME · ANYWHERE</p>
+      <h1>Vayora <span>Weather</span></h1>
+      <p>Better weather. Brighter days.</p>
+      <form id="searchForm" class="search">
+        <input id="cityInput" placeholder="Enter city name (e.g. Patna)" required>
+        <button type="submit">Search ↗</button>
+      </form>
+      <p id="message" role="status">Search for a city to see its current weather.</p>
+    </section>
+
+    <section id="weather" class="weather-layout">
+      <article class="weather-card">
+        <p class="eyebrow" id="location">YOUR WEATHER</p>
+        <div class="current">
+          <div>
+            <div id="weatherIcon" class="weather-icon">🌤️</div>
+            <h2 id="temperature">--°C</h2>
+            <p id="condition">Waiting for a city</p>
+          </div>
+          <div class="details">
+            <p>Feels like <strong id="feels">--°C</strong></p>
+            <p>Humidity <strong id="humidity">--%</strong></p>
+            <p>Wind <strong id="wind">-- km/h</strong></p>
+          </div>
+        </div>
+      </article>
+
+      <article class="forecast-card">
+        <h2>5-day forecast</h2>
+        <div id="forecast" class="forecast">
+          <p>Search for a city to load the forecast.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="about" class="about">
+      <p class="eyebrow">WHY VAYORA WEATHER?</p>
+      <h2>Weather made simple.</h2>
+      <div class="features">
+        <article><span>⚡</span><h3>Live updates</h3><p>Fetch current weather data for your selected city.</p></article>
+        <article><span>🌦️</span><h3>Useful forecasts</h3><p>Explore upcoming daily weather conditions.</p></article>
+        <article><span>📱</span><h3>Works everywhere</h3><p>A responsive layout for phones, tablets and laptops.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> VayoraWeather · Better Weather, Brighter Days</footer>
+</body>
+</html>
